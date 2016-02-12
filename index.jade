@@ -1,0 +1,21 @@
+//output: index.html, pretty:false
+
+include site/_config.jade
+
++html5
+  +head(title, stylesheets, keywords, description)
+  body    
+
+    
+    //.container
+      .col4
+        img(src="http://placehold.it/200x100")
+      .col8
+        nav: +menu('index', menu, 'horizontal', 0, 0, 'btn')
+    
+    header.container
+      .col12: img(src="site/img/apptasecurity.png", alt="Appta Security", data-sr)
+    .container.socials
+      .col1.push5: a(href="https://www.facebook.com/APPTA-SECURITY-287033244659489", target="_blank", data-sr="enter left"): i.fa.fa-facebook
+      .col1: a(href="https://twitter.com/seguridadenmx", target="_blank", data-sr="enter right"): i.fa.fa-twitter
+    +scripts

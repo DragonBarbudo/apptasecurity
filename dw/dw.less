@@ -1,0 +1,132 @@
+/* ####################################################### */
+/* IMPORTS */
+@import 'libs/reset';
+@import 'libs/mediaqueries';
+@import 'libs/grid';
+@import 'libs/elements';
+@import 'libs/visualStates';
+
+/* ####################################################### */
+/* CLASS UTILS */
+.clearfix{
+	*zoom:1;
+	&:before,&:after { content:""; display:table;}
+  &:after { clear:both; 	}
+}
+.w100{ width: 100%; }
+.t{
+  outline: 1px dashed rgba(0,0,0,0.2);
+}
+
+
+//Display GRID para container
+.grid{
+  background: url(http://griddle.it/940-12-20?num=0) repeat-y;
+  background-size:940px;
+  background-position: center;
+  outline: 1px solid rgba(0,0,0,0.2);
+  position: relative;
+  @media @tablet{
+    background: url(http://griddle.it/464-12-8?num=0) repeat-y;
+    background-size: 470px;
+    background-position: 4px;
+  }
+  @media @mobile{
+    background: url(http://griddle.it/960-12-20?num=0) repeat-y;
+    background-size: 100%-(@gutter*2);
+    background-position:center;
+  }
+  &:before{
+    content:".container";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.6em;
+    color:#aaa;
+  }
+}
+
+
+/* GENERAL STYLES */
+/*------ NAV ------*/
+/* .horizontal */
+ul{
+  &.horizontal{
+    list-style: none;
+    li{
+      position: relative;
+      a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+      }
+      &:hover{
+        ul{
+          display: block;
+        }
+      }
+      &>ul{
+        position: absolute;
+        display: none;
+        width: 100%;
+        list-style: none;
+      }
+    }
+  }
+	&.vertical{
+		list-style: none;
+		li{
+			a{
+
+			}
+			&>ul{
+				list-style: none;
+				li{
+
+				}
+			}
+		}
+	}
+}
+
+
+form{
+
+	&.simple{
+		label{display: block;}
+		input,textarea{
+			display: block;
+			.box-sizing(border-box);
+			padding: 5px;
+			width: 100%;
+		}
+	}
+
+}
+
+
+
+/* PLUGINS styles */
+/* SLICK SLIDER */
+.slick-arrow{
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  position: absolute;
+  border: none;
+  background: @main;
+  color: @b;
+  z-index: 10;
+  &.slick-prev{ left: 0;}
+  &.slick-next{ right: 0; }
+  &:hover{
+    cursor: pointer;
+    background: @b;
+    color: @main;
+  }
+}
+
+
+/* backstretch */
+.bgslider{ display: none; }

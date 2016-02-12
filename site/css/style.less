@@ -1,0 +1,59 @@
+//out: style.css
+@import '../../dw/dw.less';
+@import '../../dw/docs.less';
+
+/* ################################ CONTAINER WIDTHS: */
+@containerWidth: 960px;
+@containerWidthTablet: 480px;
+/* ################################ COLORS */
+@b: #222;
+@w: #fafafa;
+@g: #888;
+@main: #001A71;
+/* ################################ FONTS */
+.font{ font-family: 'Lato', sans-serif; }
+/* ################################ CLASSES */
+.btn{
+  font-size: 16px;
+  display: inline-block;
+  background: @w/1.05;
+  color:@g/1.4;
+  border: none;
+  padding: 8px 15px;
+  text-decoration: none;
+  .fa{ color:@w/2; margin-right:5px; margin-left: 5px;}
+  .border-radius(3px);
+  .box-sizing(border-box);
+  &:hover{
+    background: @b;
+    color:@w;
+    .breath;
+    cursor: pointer;
+  }
+  &.small{
+    padding: 0 4px;
+  }
+  &.vbottom{
+    vertical-align: bottom;
+  }
+}
+/* ################################ GENERAL */
+body{
+  .font;
+  .gradient(@main/1.4, @main*1.1);
+}
+a{
+  color:@w;
+  &:hover{
+    color:@main*2;
+  }
+}
+
+header{
+  padding: 40px 0;
+  text-align: center;
+}
+
+.socials{
+  text-align: center;
+}

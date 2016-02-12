@@ -1,0 +1,189 @@
+body.docs{
+  .gradientH(@w*1.1, @w/1.05);
+  background-attachment: fixed;
+  p, ul{font-size: 0.9em; margin: 10px 0;
+    &.small{font-size: 0.8em; color:@g;}
+  }
+  h4{
+    border-top: 1px solid @g;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 30px;
+  }
+  ul.list{
+     list-style: none;
+     li{
+       margin: 15px;
+       &:before{
+         display: inline-block;
+         font-family: FontAwesome;
+         width: 1.4em;
+         content: "\f192";
+         line-height: 1.4em;
+         color:@main;
+         .wait;
+       }
+     }
+   }
+  header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 0 10px 0;
+    background: @main;
+    z-index: 10;
+    .gradient(@main, @main*1.2);
+    h1{
+      font-size: 3em;
+      letter-spacing: -2px;
+      @media @tablet, @mobile{
+        font-size: 1.2em;
+        letter-spacing: normal;
+        text-align: center;
+      }
+    }
+    #downloadarea{
+      text-align: right;
+      .btn{
+        margin: 15px 5px;
+      }
+      @media @tablet, @mobile{
+        text-align: center;
+      }
+    }
+  }
+
+  #documentacion{
+    height: 100%;
+    margin-top: 90px;
+    position: relative;
+    nav.main{
+      position: fixed;
+      padding-top: 20px;
+      .btn{
+        display: block;
+        padding: 2px 10px;
+      }
+      @media @tablet, @mobile{
+        position: static;
+      }
+      li{
+        margin: 5px 0;
+        &:before{display: none;}
+      }
+      .listMain{
+        &>li{
+          &>a.btn{
+            background: @main;
+            .gradientH(@main, @main*1.2);
+            .transition(all 300ms);
+            &:hover{
+              background: @b;
+              .transition(all 500ms);
+              .gradientH(@g/1.5, @b);
+            }
+          }
+        }
+      }
+      .listSub{
+        margin-left: 30px;
+      }
+    }
+    #usage{
+      &>.container{
+        min-height: 800px;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 80px;
+      }
+      h2, h3{
+        .font;
+        font-size: 2em;
+      }
+    }
+  }
+
+}
+
+
+.theThings{
+  .btn{
+    margin: 10px;
+  }
+}
+
+
+.grid{
+  padding: 10px 0;
+  font-size: 0.8em;
+  color:@g;
+  text-align: center;
+}
+code{
+  display: block;
+  border:1px solid @w/1.1;
+  padding: 10px;
+  margin: 10px 0;
+}
+.t{
+  display: inline-block;
+  padding: 10px 5px;
+  text-align: center;
+  .box-sizing(border-box);
+  .gradientH(@main*1.2, @main);
+  .t{
+    .gradientH(@b, @b/1.5);
+    .t{
+      .gradientH(@main*1.2, @main);
+    }
+  }
+}
+
+.hljs{background: @b !important;}
+.hljs-tag{color:@main;}
+
+
+table{
+  font-size: 0.8em;
+  td,th{
+    border:1px solid @w/1.2;
+    padding: 5px 10px;
+  }
+  th{
+    color:@b;
+    font-weight: bold;
+    text-align: center;
+    .gradient(@main*1.2, @main);
+  }
+}
+
+
+.active{ background: @main;}
+
+
+.mt10{margin-top: 10px;}
+
+.somebox{
+  min-height: 100px;
+}
+
+code{
+  white-space: pre-wrap;
+}
+
+
+
+.seccionEspaciadora{
+  min-height: 200px;
+  border:2px dashed @g;
+  padding: 20px;
+  text-align: center;
+  margin: 10px 0;
+}
+.seccionScroll{
+  padding: 20px;
+  text-align: center;
+  border:1px solid @main;
+  margin: 10px 0;
+}
