@@ -8,7 +8,7 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dw\/docs.less",
 		"outputAbbreviatedPath": "\/css\/docs.css",
@@ -164,6 +164,26 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/garantia.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/garantia.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/garantia.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/garantia.jade",
+		"outputAbbreviatedPath": "\/garantia.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 1,
@@ -180,6 +200,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.jade",
 		"outputAbbreviatedPath": "\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/quienes-somos.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/quienes-somos.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/quienes-somos.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/quienes-somos.jade",
+		"outputAbbreviatedPath": "\/quienes-somos.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -224,6 +264,50 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/site\/img\/appta_imago.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3103,
+		"inputAbbreviatedPath": "\/site\/img\/appta_imago.png",
+		"outputAbbreviatedPath": "\/site\/img\/appta_imago.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/appta_imago_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5732,
+		"inputAbbreviatedPath": "\/site\/img\/appta_imago_dark.png",
+		"outputAbbreviatedPath": "\/site\/img\/appta_imago_dark.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/appta_security.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33296,
+		"inputAbbreviatedPath": "\/site\/img\/appta_security.png",
+		"outputAbbreviatedPath": "\/site\/img\/appta_security.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/apptasec.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7959,
+		"inputAbbreviatedPath": "\/site\/img\/apptasec.png",
+		"outputAbbreviatedPath": "\/site\/img\/apptasec.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/site\/img\/apptasecurity.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -231,6 +315,149 @@
 		"initialSize": 20771,
 		"inputAbbreviatedPath": "\/site\/img\/apptasecurity.png",
 		"outputAbbreviatedPath": "\/site\/img\/apptasecurity.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/bg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16380,
+		"inputAbbreviatedPath": "\/site\/img\/bg.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/custodio.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 258692,
+		"inputAbbreviatedPath": "\/site\/img\/custodio.png",
+		"outputAbbreviatedPath": "\/site\/img\/custodio.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/nuestroselementos.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31037,
+		"inputAbbreviatedPath": "\/site\/img\/nuestroselementos.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/nuestroselementos.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/oficiales.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25313,
+		"inputAbbreviatedPath": "\/site\/img\/oficiales.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/oficiales.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/pleca_form.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20205,
+		"inputAbbreviatedPath": "\/site\/img\/pleca_form.png",
+		"outputAbbreviatedPath": "\/site\/img\/pleca_form.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/pleca_head.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 278972,
+		"inputAbbreviatedPath": "\/site\/img\/pleca_head.png",
+		"outputAbbreviatedPath": "\/site\/img\/pleca_head.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/pleca_section.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 359087,
+		"inputAbbreviatedPath": "\/site\/img\/pleca_section.png",
+		"outputAbbreviatedPath": "\/site\/img\/pleca_section.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/serv_ase.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9262,
+		"inputAbbreviatedPath": "\/site\/img\/serv_ase.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/serv_ase.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/serv_bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2102,
+		"inputAbbreviatedPath": "\/site\/img\/serv_bg.png",
+		"outputAbbreviatedPath": "\/site\/img\/serv_bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/serv_cgps.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8563,
+		"inputAbbreviatedPath": "\/site\/img\/serv_cgps.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/serv_cgps.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/serv_k9.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10203,
+		"inputAbbreviatedPath": "\/site\/img\/serv_k9.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/serv_k9.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/serv_lyf.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9090,
+		"inputAbbreviatedPath": "\/site\/img\/serv_lyf.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/serv_lyf.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/serv_vi.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9504,
+		"inputAbbreviatedPath": "\/site\/img\/serv_vi.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/serv_vi.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

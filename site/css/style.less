@@ -1,28 +1,29 @@
 //out: style.css
 @import '../../dw/dw.less';
-@import '../../dw/docs.less';
 
 /* ################################ CONTAINER WIDTHS: */
 @containerWidth: 960px;
 @containerWidthTablet: 480px;
 /* ################################ COLORS */
-@b: #222;
-@w: #fafafa;
-@g: #888;
-@main: #001A71;
+@b: #000;
+@w: #fff;
+@g: @w/1.2;
+@main: #AA792D;
+@dark: @main/1.5;
 /* ################################ FONTS */
-.font{ font-family: 'Lato', sans-serif; }
+.font{ font-family: 'Oswald', sans-serif; }
 /* ################################ CLASSES */
 .btn{
   font-size: 16px;
+  font-weight: 300;
   display: inline-block;
-  background: @w/1.05;
-  color:@g/1.4;
+  background: @main;
+  color:@w;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 50px 14px 50px;
   text-decoration: none;
-  .fa{ color:@w/2; margin-right:5px; margin-left: 5px;}
-  .border-radius(3px);
+  .fa{ color:@w/2; margin-right:5px; margin-left: 15px;}
+  .border-radius(30px);
   .box-sizing(border-box);
   &:hover{
     background: @b;
@@ -30,17 +31,34 @@
     .breath;
     cursor: pointer;
   }
-  &.small{
-    padding: 0 4px;
-  }
-  &.vbottom{
-    vertical-align: bottom;
+  .icon{
+    font-size: 1.8em;
+    background: @w;
+    padding: 20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-right: -50px;
+    .border-radius(50%);
+    color:@main;
+    width: 70px; height: 70px;
+    .box-sizing(border-box);
   }
 }
+
+.tac{text-align: center;}
+.tal{text-align: left;}
+.tar{text-align: right;}
 /* ################################ GENERAL */
+html,body{height: auto;}
+html{
+  background-image: url(../img/bg.jpg);
+}
 body{
   .font;
-  .gradient(@main/1.4, @main*1.1);
+  background-image: url(../img/bg.jpg);
+  max-width: 1024px;
+  margin: 1% auto;
+  .box-shadow(0 0 40px #000);
 }
 a{
   color:@w;
@@ -50,10 +68,283 @@ a{
 }
 
 header{
-  padding: 40px 0;
+  width: 100%;
+  position: relative;
+  background-image: url(../img/pleca_head.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 638px;
+  h1{
+    padding: 2% 0;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+  }
+
+
+
+  .custodio{
+    position: absolute;
+    right: 0; top: 0;
+    background-image: url(../img/custodio.png);
+    width: 389px; height: 639px;
+    z-index: 0;
+  }
+  .btn{
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    margin-bottom: -40px;
+  }
+}
+
+
+
+
+.aboutus{
+  &+.aboutus{
+    margin-top: 40px;
+  }
+  h2{
+    .font;
+    font-weight: 300;
+    color:@w;
+    font-size: 2.6em;
+    line-height: 1em;
+    strong{
+      font-size: 0.8em;
+      color:@main;
+      font-weight: 400;
+    }
+  }
+  p{
+    font-weight: 300;
+    font-size: 1.1em;
+    color:@g;
+    &+p{margin-top: 20px;}
+    strong{
+      color:@main;
+      font-weight: 300;
+    }
+  }
+  ul{
+    color:@g;
+    list-style: square;
+    list-style-position: inside;
+    li{
+      margin: 10px 0;
+    }
+    strong{
+      font-weight: 300;
+      color:@main;
+
+    }
+  }
+}
+
+.megatag{
+  background: @main;
+  color:@w;
+  padding: 15px;
   text-align: center;
+  width: 100%;
+  margin: 20px 0;
+  margin-left: -15px;
+  font-weight: 300;
+  font-size: 1.2em;
+  .box-shadow(0 0 20px #000);
+  @media @mobile{
+    padding: 40px;
+    .box-sizing(border-box);
+    margin-left: 0;
+  }
+}
+
+#mainSection{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-image: url(../img/pleca_section.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: -100px;
+  padding-top:270px;
+  overflow: hidden;
+  .minilog{
+
+  }
+  .btnservs{
+    margin-top:50px;
+    margin-bottom: 20px;
+  }
+}
+.servsArea{margin-top: 60px;
+  @media @mobile{
+    margin-top: 0;
+  }
+}
+.servs{
+  .image{
+    width: 156px; height: 156px;
+    background-image: url(../img/serv_bg.png);
+    background-repeat: no-repeat;
+    margin: -10px 0 0 -10px;
+    padding: 18px 0 0 18px;
+    @media @mobile{
+      margin: -10px auto;
+    }
+  }
+  @media @mobile{ text-align: center; margin-top: 40px; margin-bottom: 20px;}
+  .col4{
+    .col-m(12);
+  }
+  .col8{
+    .col-m(12);
+  }
+  h3{
+    font-weight: 300;
+    font-size: 2em;
+    color:@main;
+    margin-top: 5px;
+  }
+  p{color:@g; font-size: 1.2em; font-weight:300; }
+  small{
+    font-size: 0.8em;
+  }
+}
+
+
+section{
+  .clearfix;
+}
+
+
+#contactSection{
+
+  width: 100%;
+  background-image: url(../img/pleca_form.png);
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 120px;
+  padding-bottom:100px;
+  color:@w;
+  font-weight: 300;
+  @media @mobile{
+    background: transparent;
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  h3{
+    font-weight: 300;
+      font-size: 2em;
+      margin-top: 20px;
+  }
+  p{
+    font-size: 1.2em;
+  }
+  label{
+    background: @dark;
+    padding: 10px 5px;
+    color:@w;
+    font-weight: 300;
+    font-size: 0.9em;
+    width: 30%;
+    float: left;
+    .box-sizing(border-box);
+    margin-bottom: 2px;
+  }
+  input,textarea{
+    width:70%;
+    float:right;
+    .box-sizing(border-box);
+    border:none;
+    font-weight: 300;
+    font-size: 0.9em;
+    padding: 10px 5px;
+    .font;
+  }
+  textarea{
+    height: 100px;
+    resize:none;
+  }
+  form{position:relative; div{width: 100%;}
+    @media @tablet, @mobile{
+      margin-top: 40px;
+    }
+  }
+  .btn{
+      float:right;
+      background: @w;
+      color:@main;
+      margin-top: 14px;
+      &:hover{
+        background: @dark;
+        color:@w;
+      }
+  }
+  .resultado{
+    position:  absolute;
+    left: 0; bottom: 0;
+    color:@main*1.4;
+  }
+}
+
+nav{
+  padding: 40px 0;
+  a{
+    color:@w;
+    font-weight: 300;
+    &:hover{
+      color:@main;
+    }
+  }
+}
+
+.clientes{
+  padding: 40px 0;
+  .cl{
+    color: @w;
+    min-height: 120px;
+    text-align: center;
+    .box-sizing(border-box);
+    padding: 10px;
+    font-weight: 300;
+    font-size: 1.2em;
+    background: fade(@b, 35%);
+    margin-bottom: 20px;
+    display: table;
+    border-bottom: 2px solid @dark;
+    .text{
+      display: table-cell;
+  vertical-align: middle;
+    }
+  }
 }
 
 .socials{
   text-align: center;
+  padding: 40px 0;
+  a{
+    color:@main;
+    &:hover{
+      color:@w;
+    }
+  }
+}
+
+
+.photoround{
+  width: 220px;
+  height: 220px;
+  .border-radius(50%);
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+
+.nomobile{
+  @media @mobile{
+    display: none !important;
+  }
 }

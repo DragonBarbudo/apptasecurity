@@ -10,7 +10,7 @@ include ../dw/dw.jade
 //- STYLESHEETS
 - var stylesheets = []
 - stylesheets.push('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
-- stylesheets.push('http://fonts.googleapis.com/css?family=Lato:300,400,700')
+- stylesheets.push('https://fonts.googleapis.com/css?family=Oswald:400,300,700')
 - stylesheets.push('http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css')
 - stylesheets.push('https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/css/swipebox.min.css')
 - stylesheets.push('site/css/style.css') //Main style
@@ -30,6 +30,32 @@ include ../dw/dw.jade
 //- MENU
 - var menu = [] //- menu.push('PageName', 'Slug')
 - menu.push(['Inicio', 'index']) //[0]
-- menu.push(['Nosotros', 'nosotros']) //[1]
-- menu.push(['Servicios', 'servicios']) //[2]
-- menu.push(['Contacto', 'contacto']) //[3]
+- menu.push(['¿Quiénes somos?', 'quienes-somos']) //[1]
+- menu.push(['Garantía', 'garantia']) //[2]
+//- menu.push(['Clientes', 'clientes']) //[3]
+
+
+mixin logo
+  .container
+    .col12: h1(data-sr='enter top move 100px'): a(href="index.html"): img(src="site/img/appta_security.png", alt="#{title}", title="#{title}")
+
+mixin contact
+  section#contactSection
+    .container
+      .col5.col-t10.push-t1.col-m10.push-m1
+        div.tac
+          img(src="site/img/appta_imago_dark.png", alt="#{title}")
+        h3 Ponte en contacto con nosotros.
+        p Recibe asesoramiento personalido y resuelve tus dudas.
+      .col6.push1.col-t10.push-t1.col-m10.push-m1: +formSimple('central@domino.com', 'central@dominio.com', 'Mensaje del sitio ApptaSecurity')
+
+mixin footer
+  footer
+    .container
+      .col12.tac
+        a(href="index.html"): img(src="site/img/appta_imago.png", alt="#{title}")
+    .container
+      .col12: nav: +menu('index', menu, 'horizontal')
+    .container.socials
+      .col1.push5: a(href="https://www.facebook.com/APPTA-SECURITY-287033244659489", target="_blank", data-sr="enter left"): i.fa.fa-facebook
+      .col1: a(href="https://twitter.com/seguridadenmx", target="_blank", data-sr="enter right"): i.fa.fa-twitter

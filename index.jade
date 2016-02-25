@@ -5,17 +5,70 @@ include site/_config.jade
 +html5
   +head(title, stylesheets, keywords, description)
   body    
-
     
-    //.container
-      .col4
-        img(src="http://placehold.it/200x100")
-      .col8
-        nav: +menu('index', menu, 'horizontal', 0, 0, 'btn')
+    header
+      +logo
+      .custodio.notablet.nomobile
+      .container.aboutus
+        .col8.col-t10.push-t1.col-m10.push-m1
+          h2
+            | POR UNA SEGURIDAD INTEGRAL
+            br
+            strong ACORDE A LA ÉPOCA Y A SUS NECESIDADES
+          p Somos una empresa de Seguridad Privada, profesional y altamente calificada, con autorización otorgada por la Dirección General de Seguridad Pública Federal, dependiente de la Secretaría de Gobernación, lo que nos permite apoyarlo en cualquier parte de la República Mexicana, siendo nuestro trabajo la mejor carta de presentación, así como la entera satisfacción de nuestros clientes.
+          //p: strong Nuestra Finalidad, para contar con su preferencia, es saber de sus necesidades para poder ayudarlo y apoyarlo en ellas.
+      .container
+        .col12.tac
+          a(href="quienes-somos.html").btn
+            | ¿QUIÉNES SOMOS?
+            .icon.fa.fa-question
+      
     
-    header.container
-      .col12: img(src="site/img/apptasecurity.png", alt="Appta Security", data-sr)
-    .container.socials
-      .col1.push5: a(href="https://www.facebook.com/APPTA-SECURITY-287033244659489", target="_blank", data-sr="enter left"): i.fa.fa-facebook
-      .col1: a(href="https://twitter.com/seguridadenmx", target="_blank", data-sr="enter right"): i.fa.fa-twitter
+    
+    section#mainSection
+      .container
+        .col12.tac
+          img(src="site/img/apptasec.png", alt="#{title}")  
+      .container.servsArea
+        .col6.col-t12.col-m12
+          article.container.servs
+            .col4: .image: img(src="site/img/serv_vi.jpg", alt="Vigilancia Intramuros")
+            .col8
+              h3 Vigilancia Intramuros
+              p Empresarial, Comercial y Habitacional
+        .col6.col-t12.col-m12
+          article.container.servs
+            .col4: .image: img(src="site/img/serv_lyf.jpg", alt="Custodias Locales y Foráneos")
+            .col8
+              h3 Custodias
+              p Locales y Foráneas
+      .container.servsArea
+        .col6.col-t12.col-m12
+          article.container.servs
+            .col4: .image: img(src="site/img/serv_ase.jpg", alt="Asesoría técnia en materia de seguridad")
+            .col8
+              h3 Asesoría Técnica
+              p En Materia De Seguridad
+        .col6.col-t12.col-m12
+          article.container.servs
+            .col4: .image: img(src="site/img/serv_k9.jpg", alt="Unidades K9")
+            .col8
+              h3 Unidades K9
+              p De Detección o Guardia y Protección
+      .container.servsArea
+        .col6.col-t12.col-m12
+          article.container.servs
+            .col4: .image: img(src="site/img/serv_cgps.jpg", alt="Monitoreo satelital con equipos GPS y GPRS")
+            .col8
+              h3 Monitoreo Satelital
+              p Con Equipos GPS y GPRS<br>Personal y Unidades Móviles <br><small>(Desde un vehículo hasta una flotilla).</small>
+            
+        .col6.col-t12.col-m12.tac
+          a(href="garantia.html").btn.btnservs
+            | NUESTRA GARANTÍA DE SERVICIO
+            .icon.fa.fa-caret-right
+      .clearfix
+    
+    +contact
+    +footer
     +scripts

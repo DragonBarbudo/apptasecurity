@@ -1,0 +1,75 @@
+//output: index.html, pretty:false
+
+include site/_config.jade
+
++html5
+  +head('¿Quiénes somos? | '+title, stylesheets, keywords, description)
+  body    
+    
+    header
+      +logo
+      .container.aboutus
+        .col10.push1.col-t10.push-t1.col-m10.push-m1
+          h2
+            strong ¿Quiénes somos?
+            br
+            | APPTA SECURITY
+          p Somos una empresa de Seguridad Privada con 10 años en el mercado, con el profesionalismo y la experiencia de nuestro personal y directivos, que está dando resultados positivos y contamos con la satisfacción de nuestros clientes, por eso somos la mejor opción en Seguridad Privada integral. 
+          p Implementamos sistemas de trabajo buscando siempre la excelencia traducida en buenos resultados para tu empresa, es decir, tu patrimonio, adaptándonos a tus necesidades y requerimientos, integrando una seguridad profesionalizada. 
+      .container.aboutus
+        .col10.push1.col-t10.push-t1.col-m10.push-m1
+          h2
+            strong Experiencia
+            br
+            | Certificación de Organismos Internacionales
+          ul
+            li
+              strong IFPO CAPITULO MEXICO (INTERNATIONAL FOUNDATION FOR PROTECTION OFFICERS) 
+              br
+              | - Certified Protection Officer Program (CPO)
+              br
+              | - Certified in Security Supervision and Management (CSSM)
+              br
+              | - Certified Protection Officer Instructors (CPOI’s)
+            li
+              strong ASIS CAPITULO MEXICO (AMERICAN SOCIETY FOR INDUSTRIAL SECURITY)
+              br
+              | - Certified Protection Professional (CPP)
+              br
+              | - Physical Security Professional (PSP)
+            li
+              strong Miembro del FORO LATINOAMERICANO DE PROFESIONALES EN SEGURIDAD con sede en B.A. Argentina
+            li
+              strong Nominada y galardonada por los Premios Excelencia México en Seguridad Privada. 
+          
+          
+    .megatag ESTAMOS ALTAMENTE CALIFICADOS PARA RESGUARDAR SU SEGURIDAD.
+  
+    .container.aboutus
+      .col6.col-t10.push-t1.col-m10.push-m1
+        h2
+          | Nuestros Objetivos
+    .container.aboutus
+      .col6.col-t10.push-t1.col-m10.push-m1
+        p: strong Misión:
+        p Garantizar la integridad de nuestros clientes, aplicando medidas preventivas de seguridad, protección y control, con el fin de minimizar los factores de riesgo en lo referente a seguridad en las áreas que se requiera. 
+        p Desarrollar programas de investigación, innovación, asistencia técnica, formación y capacitación de personal de manera honesta, leal y profesional.
+        p Ofrecer a nuestros clientes alternativas objetivas de acuerdo a sus expectativas y necesidades particulares específicas en lo referente a una seguridad preventiva en sus modalidades de intramuros y custodias de vehículos que se presenten, tanto en la integridad física y emocional familia y de su empresa, con el único propósito de garantizar resultados satisfactorios.
+      .col6.col-t10.push-t1.col-m10.push-m1
+        p: strong Visión:
+        p Consolidar una estructura de seguridad que se extienda a lo largo del país, con el objetivo de combatir a la delincuencia y ofrecer una mejor calidad de vida a las generaciones del futuro, a través de la eficiencia, honradez y calidad de nuestra organización.
+    .megatag
+      p Satisfacción con lealtad, ética, profesionalismo y honestidad.
+    .container.aboutus
+      .col6.col-t10.push-t1.col-m10.push-m1
+        h2
+          | Nuestros Clientes
+    - var clients = ['Villautos Aragón', 'Villautos Norte', 'Unicars', 'Comercializadora de Valor Agregado', 'Grupo Velmen', 'Fletes de Oriente', 'Auto Transportes de Oriente', 'Logis Express', 'Grupo Aduanero Intertrade', 'Asesores Integrales en Aduanas y Logística de Servicios de Transporte', 'Condominios Refugio de la Estrella', 'Fraccionamiento Haciendas del Tepeyac', 'Intermediación y Comercialización de Muebles Tubulares', 'Tequila Siete Leguas']
+    .container.clientes
+      each cl in clients
+        .col4.col-m6.cl: .text=cl
+    
+    
+    +contact
+    +footer
+    +scripts
