@@ -175,15 +175,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/garantia.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/garantia.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/garantia.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -195,15 +186,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -214,15 +196,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
-		},
-	"\/quienes-somos.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/quienes-somos.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/quienes-somos.jade": {
 		"compileDebug": 1,
@@ -352,6 +325,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/site\/img\/experiencia.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18660,
+		"inputAbbreviatedPath": "\/site\/img\/experiencia.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/experiencia.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/garantiaelemento.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17560,
+		"inputAbbreviatedPath": "\/site\/img\/garantiaelemento.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/garantiaelemento.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/site\/img\/nuestroselementos.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -359,6 +354,17 @@
 		"initialSize": 31037,
 		"inputAbbreviatedPath": "\/site\/img\/nuestroselementos.jpg",
 		"outputAbbreviatedPath": "\/site\/img\/nuestroselementos.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/site\/img\/objetivos.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17455,
+		"inputAbbreviatedPath": "\/site\/img\/objetivos.jpg",
+		"outputAbbreviatedPath": "\/site\/img\/objetivos.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
