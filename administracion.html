@@ -33,7 +33,7 @@
         </div>
       </div>
       <div ng-show="auth" class="container aboutus createuser">
-        <div class="col6">
+        <div class="col6 col-t5 col-m12">
           <form>
             <h3>Crear nuevo código</h3>
             <label>Datos generales</label>
@@ -44,7 +44,7 @@
             <textarea placeholder="Contactos, detalles, etc." ng-model="user.info"></textarea>
           </form>
         </div>
-        <div class="col6 tac">
+        <div class="col6 col-t7 col-m12 tac">
           <h3>TEXTO:</h3>
           <p class="generado">{{ generado = user.name+'\n\nDirección: '+user.address+' ('+user.tel+ ')\n\n'+user.info }}</p>
           <h3>QR:</h3>
@@ -60,7 +60,7 @@
         <div class="col12">
           <h2> <strong>Códigos</strong><br>Almacenados</h2>
         </div>
-        <div ng-repeat="user in usersList track by $index" class="col3 user">
+        <div ng-repeat="user in usersList track by $index" class="col3 col-t4 col-m6 user">
           <div class="userName">{{user.nombre}}</div>
           <div class="qr">
             <qr text="user.generado" type-number="0" correction-level="L" image="true" size="1000" id="qr{{user._id.$oid}}"></qr>
@@ -69,7 +69,7 @@
             <div class="col8">
               <button href="#" ng-click="downloadPng('qr'+user._id.$oid, user.nombre)" class="downloadPng">Descargar</button>
             </div>
-            <div class="col2 push2 tac">
+            <div class="col3 push1 tac">
               <button ng-click="deleteQr(user._id.$oid, $index)" class="deleteQr"><i class="fa fa-times"></i></button>
             </div>
           </div>

@@ -23,7 +23,7 @@ include site/_config.jade
             .resultado(ng-show="loading"): i.fa.fa-circle-o-notch.fa-spin
             
       .container.aboutus.createuser(ng-show="auth")
-        .col6
+        .col6.col-t5.col-m12
           form
             h3 Crear nuevo código
             label Datos generales
@@ -33,7 +33,7 @@ include site/_config.jade
             label Información adicional
             textarea(placeholder="Contactos, detalles, etc.", ng-model="user.info")
             
-        .col6.tac
+        .col6.col-t7.col-m12.tac
           h3 TEXTO:
           p.generado {{ generado = user.name+'\n\nDirección: '+user.address+' ('+user.tel+ ')\n\n'+user.info }}
           h3 QR:
@@ -48,12 +48,12 @@ include site/_config.jade
             strong Códigos
             br
             | Almacenados
-        .col3.user(ng-repeat="user in usersList track by $index")
+        .col3.col-t4.col-m6.user(ng-repeat="user in usersList track by $index")
           .userName {{user.nombre}}
           .qr: qr(text="user.generado", type-number="0", correction-level="L", image="true", size="1000", id="qr{{user._id.$oid}}")
           .container.downloaders
             .col8: button.downloadPng(href="#", ng-click="downloadPng('qr'+user._id.$oid, user.nombre)") Descargar
-            .col2.push2.tac: button.deleteQr(ng-click="deleteQr(user._id.$oid, $index)"): i.fa.fa-times
+            .col3.push1.tac: button.deleteQr(ng-click="deleteQr(user._id.$oid, $index)"): i.fa.fa-times
     
     
       .container.aboutus(ng-show="auth")
