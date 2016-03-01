@@ -1353,3 +1353,17 @@ nav a:hover {
 .createuser .user button:hover {
   background: #835d23;
 }
+.createuser .filterqr input {
+  background: #000;
+  color: #AA792D !important;
+  border-bottom: 1px solid #AA792D !important;
+  margin-top: 40px !important;
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+}
+@media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
+  .createuser .filterqr input {
+    width: 80%;
+  }
+}

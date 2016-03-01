@@ -43,12 +43,16 @@ include site/_config.jade
             button(ng-click="storeQR()", ng-show="user.name && user.address && user.tel").storeBtn Almacenar QR
     
       .container.aboutus.createuser(ng-show="auth")
-        .col12
+        .col6.col-m12
           h2 
             strong Códigos
             br
             | Almacenados
-        .col3.col-t4.col-m6.user(ng-repeat="user in usersList track by $index")
+        .col6.col-m12.tac
+          form.filterqr
+            input(type="text", ng-model="searchQR", placeholder="Buscar")
+        .clearfix
+        .col3.col-t4.col-m6.user(ng-repeat="user in usersList | filter:searchQR")
           .userName {{user.nombre}}
           .qr: qr(text="user.generado", type-number="0", correction-level="L", image="true", size="1000", id="qr{{user._id.$oid}}")
           .container.downloaders

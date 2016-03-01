@@ -57,10 +57,16 @@
         </div>
       </div>
       <div ng-show="auth" class="container aboutus createuser">
-        <div class="col12">
+        <div class="col6 col-m12">
           <h2> <strong>Códigos</strong><br>Almacenados</h2>
         </div>
-        <div ng-repeat="user in usersList track by $index" class="col3 col-t4 col-m6 user">
+        <div class="col6 col-m12 tac">
+          <form class="filterqr">
+            <input type="text" ng-model="searchQR" placeholder="Buscar">
+          </form>
+        </div>
+        <div class="clearfix"></div>
+        <div ng-repeat="user in usersList | filter:searchQR" class="col3 col-t4 col-m6 user">
           <div class="userName">{{user.nombre}}</div>
           <div class="qr">
             <qr text="user.generado" type-number="0" correction-level="L" image="true" size="1000" id="qr{{user._id.$oid}}"></qr>

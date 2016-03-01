@@ -16,7 +16,7 @@ app.controller('AdminCtrl', ['$scope', '$http', '$rootScope', function($scope, $
   $scope.generado = "";
   $scope.accessPlaceholder = "Clave de acceso";
   $scope.changeKPlaceholder = "Nueva clave";
-  $scope.usersList = {};
+  $scope.usersList = [];
   $scope.newpass = "";
 
 
