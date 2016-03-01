@@ -1,0 +1,108 @@
+
+<!--output: index.html, pretty:false-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Administracion | Appta Security</title>
+    <meta name="description" content="Sistemas Integrales Especializados de Seguridad en México">
+    <meta name="keywords" content="seguridad privada, appta security, guardias intramuros, custodias locales y foráneas, unidad k-9 de protección y de detección antinarcóticos, sistemas cctv y gps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/css/swipebox.min.css">
+    <link rel="stylesheet" href="site/css/style.css">
+  </head>
+  <body ng-app="Appta" class="admin"> 
+    <!--.container.tac
+    +logo
+    
+    -->
+    <div ng-controller="AdminCtrl" class="admin">
+      <div class="container aboutus">
+        <div class="col12">
+          <h2> <strong>Administrador</strong><br>APPTA SECURITY</h2>
+          <form ng-submit="submit()" ng-hide="auth" class="login">
+            <label for="accesskey">Coloque su clave de acceso</label>
+            <input type="password" id="accesskey" placeholder="{{accessPlaceholder}}" ng-model="accesskey">
+            <button type="submit">Ingresar</button>
+            <div ng-show="loading" class="resultado"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+          </form>
+        </div>
+      </div>
+      <div ng-show="auth" class="container aboutus createuser">
+        <div class="col6">
+          <form>
+            <h3>Crear nuevo código</h3>
+            <label>Datos generales</label>
+            <input type="text" placeholder="Nombre" ng-model="user.name">
+            <input type="text" placeholder="Dirección" ng-model="user.address">
+            <input type="text" placeholder="Teléfono" ng-model="user.tel">
+            <label>Información adicional</label>
+            <textarea placeholder="Contactos, detalles, etc." ng-model="user.info"></textarea>
+          </form>
+        </div>
+        <div class="col6 tac">
+          <h3>TEXTO:</h3>
+          <p class="generado">{{ generado = user.name+'\n\nDirección: '+user.address+' ('+user.tel+ ')\n\n'+user.info }}</p>
+          <h3>QR:</h3>
+          <div class="qr">
+            <qr text="generado" type-number="0" correction-level="L"></qr>
+          </div>
+          <div class="tar">
+            <button ng-click="storeQR()" ng-show="user.name &amp;&amp; user.address &amp;&amp; user.tel" class="storeBtn">Almacenar QR</button>
+          </div>
+        </div>
+      </div>
+      <div ng-show="auth" class="container aboutus createuser">
+        <div class="col12">
+          <h2> <strong>Códigos</strong><br>Almacenados</h2>
+        </div>
+        <div ng-repeat="user in usersList track by $index" class="col3 user">
+          <div class="userName">{{user.nombre}}</div>
+          <div class="qr">
+            <qr text="user.generado" type-number="0" correction-level="L" image="true" size="1000" id="qr{{user._id.$oid}}"></qr>
+          </div>
+          <div class="container downloaders">
+            <div class="col8">
+              <button href="#" ng-click="downloadPng('qr'+user._id.$oid, user.nombre)" class="downloadPng">Descargar</button>
+            </div>
+            <div class="col2 push2 tac">
+              <button ng-click="deleteQr(user._id.$oid, $index)" class="deleteQr"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-show="auth" class="container aboutus">
+        <div class="col12">
+          <h2> <strong>Modificar</strong><br>Clave de acceso</h2>
+          <form ng-submit="changeKey()" class="login">
+            <label for="accesskey">Coloque la nueva clave de acceso</label>
+            <input type="password" ng-model="newAccesskey" placeholder="{{changeKPlaceholder}}">
+            <input type="password" ng-model="newAccesskey2" placeholder="Confirmar clave">
+            <button type="submit">Actualizar clave</button>
+            <div ng-show="loading" class="resultado"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+            <label class="status">{{newpass}}</label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--+footer-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/js/jquery.swipebox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/0.1.10/jquery.scrollify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/7.0.2/js/smooth-scroll.min.js"></script>
+    <script src="site/js/script.js"></script>
+    <script src="site/js/qr.js"></script>
+    <script src="site/js/angular-qr.js"></script>
+    <script src="site/js/download.js"></script>
+    <script src="site/js/admin.js"></script>
+  </body>
+</html>

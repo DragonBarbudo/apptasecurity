@@ -893,6 +893,9 @@ body {
   -moz-box-shadow: 0 0 40px #000;
   box-shadow: 0 0 40px #000;
 }
+body.admin {
+  padding: 60px 0 120px 0;
+}
 a {
   color: #fff;
 }
@@ -1212,4 +1215,136 @@ nav a:hover {
   .nomobile {
     display: none !important;
   }
+}
+.login {
+  text-align: center;
+}
+.login label {
+  color: #fff;
+  display: block;
+  margin: 10px;
+  font-weight: 300;
+}
+.login input {
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  margin: 0;
+  font-size: 1em;
+}
+.login button {
+  font-size: 1em;
+  background: #AA792D;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+.login button:hover {
+  background: #71511e;
+}
+.login .resultado {
+  margin: 5px;
+  font-size: 0.9em;
+  text-align: center;
+  color: #AA792D;
+}
+.createuser h3 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+.createuser label {
+  display: block;
+  color: #AA792D;
+  font-weight: 300;
+  margin: 10px 0;
+}
+.createuser input,
+.createuser textarea {
+  border: none;
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #000;
+  width: 100%;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+.createuser textarea {
+  height: 210px;
+}
+.createuser .generado {
+  margin: 30px;
+  border: 1px solid #8e8e8e;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #AA792D;
+}
+.createuser .storeBtn {
+  background: #AA792D;
+  color: #fff;
+  border: none;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.4em;
+  margin: 10px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.createuser .storeBtn:hover {
+  background: #835d23;
+}
+.createuser .qr {
+  padding: 20px;
+  background: #fff;
+  display: inline-block;
+  margin: 20px auto;
+}
+.createuser .user {
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: 1px solid #b1b1b1;
+  padding: 10px;
+  margin-top: 20px;
+}
+.createuser .user .userName {
+  color: #AA792D;
+  text-align: center;
+}
+.createuser .user .qr {
+  padding: 10px;
+  margin: 10px;
+}
+.createuser .user .qr canvas,
+.createuser .user .qr img {
+  width: 100%;
+}
+.createuser .user p {
+  margin-bottom: 5px;
+  font-size: 0.8em;
+}
+.createuser .user button {
+  background: #AA792D;
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.createuser .user button:hover {
+  background: #835d23;
 }
