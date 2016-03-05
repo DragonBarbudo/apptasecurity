@@ -72,8 +72,11 @@
             <qr text="user.generado" type-number="0" correction-level="L" image="true" size="1000" id="qr{{user._id.$oid}}"></qr>
           </div>
           <div class="container downloaders">
-            <div class="col8">
-              <button href="#" ng-click="downloadPng('qr'+user._id.$oid, user.nombre)" class="downloadPng">Descargar</button>
+            <div class="col5">
+              <button href="#" ng-click="downloadPng('qr'+user._id.$oid, user.nombre)" class="downloadPng"><i class="fa fa-download"></i></button>
+            </div>
+            <div class="col3">
+              <button href="#" ng-click="editUser(user)" class="downloadPng"><i class="fa fa-pencil"></i></button>
             </div>
             <div class="col3 push1 tac">
               <button ng-click="deleteQr(user._id.$oid, $index)" class="deleteQr"><i class="fa fa-times"></i></button>
@@ -92,6 +95,25 @@
             <div ng-show="loading" class="resultado"><i class="fa fa-circle-o-notch fa-spin"></i></div>
             <label class="status">{{newpass}}</label>
           </form>
+        </div>
+      </div>
+      <div ng-show="auth &amp;&amp; editing" class="editor">
+        <div class="container">
+          <div class="col12">
+            <form>
+              <h3>Editar usuario</h3>
+              <label>Datos generales</label>
+              <input type="text" placeholder="Nombre" ng-model="editingUser.nombre">
+              <input type="text" placeholder="Dirección" ng-model="editingUser.direccion">
+              <input type="text" placeholder="Teléfono" ng-model="editingUser.telefono">
+              <label>Información adicional</label>
+              <textarea placeholder="Contactos, detalles, etc." ng-model="editingUser.info"></textarea>{{ editingUser.generado = editingUser.nombre+'\n\nDirección: '+editingUser.direccion+' ('+editingUser.telefono+ ')\n\n'+editingUser.info }}
+              <div class="tar">
+                <button ng-click="cancelUpdate()" class="storeBtn">Cancelar</button>
+                <button ng-click="updateUser()" class="storeBtn">Actualizar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

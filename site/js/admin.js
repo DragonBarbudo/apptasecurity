@@ -11,6 +11,7 @@ var codigosDBSolo = 'https://api.mlab.com/api/1/databases/apptasecurity/collecti
 
 app.controller('AdminCtrl', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope){
   $scope.user = {};
+
   $scope.auth = false;
   $scope.loading=false;
   $scope.generado = "";
@@ -18,6 +19,9 @@ app.controller('AdminCtrl', ['$scope', '$http', '$rootScope', function($scope, $
   $scope.changeKPlaceholder = "Nueva clave";
   $scope.usersList = [];
   $scope.newpass = "";
+
+  $scope.editing = false;
+  $scope.editingUser;
 
 
   var request = {
@@ -27,19 +31,6 @@ app.controller('AdminCtrl', ['$scope', '$http', '$rootScope', function($scope, $
   $http(request).then(function(response){
     $scope.usersList = response.data;
   });
-
-  /*
-  var request = {
-    method: 'POST',
-    url: adminDB,
-    data: JSON.stringify({"acceso": "admin"})
-  };
-
-  $http(request).then(function(response){
-    console.log(response);
-  });
-*/
-
 
 
   $scope.submit = function() {
@@ -112,6 +103,34 @@ app.controller('AdminCtrl', ['$scope', '$http', '$rootScope', function($scope, $
       $scope.usersList.splice(indx, 1)
     });
   }
+
+
+    $scope.editUser = function(theuser){
+      $scope.editing = true;
+      $scope.editingUser = theuser;
+
+    }
+
+    $scope.updateUser = function(){
+      $scope.editing = false;
+      var request = {
+        method : 'PUT',
+        url: codigosDBSolo+$scope.editingUser._id.$oid+shhh,
+        data: JSON.stringify({'nombre':$scope.editingUser.nombre, 'direccion':$scope.editingUser.direccion, 'telefono':$scope.editingUser.telefono, 'info':$scope.editingUser.info,'generado':$scope.editingUser.generado})
+      };
+      console.log($scope.editingUser);
+      console.log(codigosDBSolo+$scope.editingUser._id.$oid+shhh);
+      $http(request).then(function(response){
+        console.log(response);
+      });
+      $scope.editingUser = {};
+    }
+
+    $scope.cancelUpdate = function(){
+      $scope.editing = false;
+      $scope.editingUser = {};
+    }
+
 
 
 }]);

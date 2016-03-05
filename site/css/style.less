@@ -400,7 +400,7 @@ nav{
 
 
 
-.createuser{
+.createuser, .editor{
   h3{ color:@w; font-weight: 300; font-size: 1.2em; }
   label{ display: block; color:@main; font-weight: 300; margin: 10px 0;}
   input, textarea{ border:none; padding: 10px; .font; font-weight: 300; color:@b; width: 100%; .box-sizing(border-box); font-size: 1.1em; margin: 5px 0; }
@@ -432,9 +432,19 @@ nav{
     border-bottom: 1px solid @g/1.2;
     padding: 10px;
     margin-top: 20px;
+    @media @desktop{
+      height: 300px;
+    }
+    @media @tablet{
+      height: 260px;
+    }
+    @media @mobile{
+      height: 280px;
+    }
     .userName{
       color:@main;
       text-align: center;
+      font-weight: lighter;
     }
     .qr{
       padding: 10px;
@@ -469,4 +479,25 @@ nav{
     }
   }
 
+}
+
+
+.editor{
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 40px;
+  width: 80%;
+  margin-left: -40%;
+  background: @b;
+  padding: 20px 40px;
+  .border-radius(4px);
+  border: 1px solid @main;
+  .box-shadow(0 0 10px @b);
+  .box-sizing(border-box);
+  .container{ width: 100%; }
+  @media @mobile{
+    top: 5px;
+    padding: 5px 10px;
+  }
 }

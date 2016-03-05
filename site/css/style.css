@@ -1257,19 +1257,23 @@ nav a:hover {
   text-align: center;
   color: #AA792D;
 }
-.createuser h3 {
+.createuser h3,
+.editor h3 {
   color: #fff;
   font-weight: 300;
   font-size: 1.2em;
 }
-.createuser label {
+.createuser label,
+.editor label {
   display: block;
   color: #AA792D;
   font-weight: 300;
   margin: 10px 0;
 }
 .createuser input,
-.createuser textarea {
+.editor input,
+.createuser textarea,
+.editor textarea {
   border: none;
   padding: 10px;
   font-family: 'Oswald', sans-serif;
@@ -1283,17 +1287,20 @@ nav a:hover {
   font-size: 1.1em;
   margin: 5px 0;
 }
-.createuser textarea {
+.createuser textarea,
+.editor textarea {
   height: 210px;
 }
-.createuser .generado {
+.createuser .generado,
+.editor .generado {
   margin: 30px;
   border: 1px solid #8e8e8e;
   padding: 20px;
   background: rgba(0, 0, 0, 0.3);
   color: #AA792D;
 }
-.createuser .storeBtn {
+.createuser .storeBtn,
+.editor .storeBtn {
   background: #AA792D;
   color: #fff;
   border: none;
@@ -1308,16 +1315,19 @@ nav a:hover {
   padding: 10px 20px;
   cursor: pointer;
 }
-.createuser .storeBtn:hover {
+.createuser .storeBtn:hover,
+.editor .storeBtn:hover {
   background: #835d23;
 }
-.createuser .qr {
+.createuser .qr,
+.editor .qr {
   padding: 20px;
   background: #fff;
   display: inline-block;
   margin: 20px auto;
 }
-.createuser .user {
+.createuser .user,
+.editor .user {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1326,23 +1336,48 @@ nav a:hover {
   padding: 10px;
   margin-top: 20px;
 }
-.createuser .user .userName {
+@media only screen and (min-width: 960px) {
+  .createuser .user,
+  .editor .user {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 959px) {
+  .createuser .user,
+  .editor .user {
+    height: 260px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .createuser .user,
+  .editor .user {
+    height: 280px;
+  }
+}
+.createuser .user .userName,
+.editor .user .userName {
   color: #AA792D;
   text-align: center;
+  font-weight: lighter;
 }
-.createuser .user .qr {
+.createuser .user .qr,
+.editor .user .qr {
   padding: 10px;
   margin: 10px;
 }
 .createuser .user .qr canvas,
-.createuser .user .qr img {
+.editor .user .qr canvas,
+.createuser .user .qr img,
+.editor .user .qr img {
   width: 100%;
 }
-.createuser .user p {
+.createuser .user p,
+.editor .user p {
   margin-bottom: 5px;
   font-size: 0.8em;
 }
-.createuser .user button {
+.createuser .user button,
+.editor .user button {
   background: #AA792D;
   width: 100%;
   padding: 10px 5px;
@@ -1350,10 +1385,12 @@ nav a:hover {
   color: #fff;
   cursor: pointer;
 }
-.createuser .user button:hover {
+.createuser .user button:hover,
+.editor .user button:hover {
   background: #835d23;
 }
-.createuser .filterqr input {
+.createuser .filterqr input,
+.editor .filterqr input {
   background: #000;
   color: #AA792D !important;
   border-bottom: 1px solid #AA792D !important;
@@ -1363,7 +1400,41 @@ nav a:hover {
   width: 50%;
 }
 @media only screen and (min-width: 481px) and (max-width: 959px), only screen and (max-width: 480px) {
-  .createuser .filterqr input {
+  .createuser .filterqr input,
+  .editor .filterqr input {
     width: 80%;
+  }
+}
+.editor {
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 40px;
+  width: 80%;
+  margin-left: -40%;
+  background: #000;
+  padding: 20px 40px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #AA792D;
+  -webkit-box-shadow: 0 0 10px #000;
+  -moz-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.editor .container {
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .editor {
+    top: 5px;
+    padding: 5px 10px;
   }
 }
